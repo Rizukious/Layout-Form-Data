@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/cardview_shadow_start_color"
+    >
+
+    <ScrollView
+        android:id="@+id/form_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="10dp"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="200dp"
+            android:layout_margin="16dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/label_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Form Data"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/label_form"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Nama"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <EditText
+                    android:id="@+id/et_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_nama"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_nik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/et_nama"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Nomor Induk Kependudukan"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <EditText
+                    android:id="@+id/et_nik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_nik"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_usia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/et_nik"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Usia"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <EditText
+                    android:id="@+id/et_usia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_usia"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_jk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/et_usia"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Jenis Kelamin"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/jk_pilih"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_jk"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/et_jk_l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laki-laki"
+                        android:fontFamily="@font/quicksand_bold"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/et_jk_p"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perempuan"
+                        android:fontFamily="@font/quicksand_bold"
+                        />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tv_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/jk_pilih"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Alamat"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <EditText
+                    android:id="@+id/et_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_alamat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/et_alamat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Email"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_email"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_sekolah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/et_email"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Asal Sekolah"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <EditText
+                    android:id="@+id/et_sekolah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sekolah"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_kompetensi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/et_sekolah"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Kompetensi yang dimiliki"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <EditText
+                    android:id="@+id/et_kompetensi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_kompetensi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_kompetensi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="400dp"
+                    android:text="SIMPAN"
+                    android:onClick="simpan"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/tampil_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="200dp"
+            android:layout_margin="16dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/label_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Data Anda"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_data_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/label_data"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Nama"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_nama2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_nama"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_nik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_nama2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Nomor Induk Kependudukan"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_nik2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_nik"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_usia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_nik2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Usia"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_usia2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_usia"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_jk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_usia2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Jenis Kelamin"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_jk2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_jk"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_jk2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Alamat"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_alamat2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_alamat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_alamat2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Email"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_email2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_email"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_sekolah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_email2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Sekolah"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_sekolah2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_sekolah"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_kompetensi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_sekolah2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Kompetensi"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_data_kompetensi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_kompetensi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="350dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_kompetensi2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:width="400dp"
+                    android:text="KEMBALI"
+                    android:onClick="kembali"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
